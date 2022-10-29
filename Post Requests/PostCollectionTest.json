@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "c874887b-c287-4374-af40-b2e766da0688",
+		"name": "POST request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11109172"
+	},
+	"item": [
+		{
+			"name": "Create new project",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Project NEW -2\"\n}"
+				},
+				"url": {
+					"raw": "{{base_url1}}/index.php?/api/v2/add_project",
+					"host": [
+						"{{base_url1}}"
+					],
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "/api/v2/add_project",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated project",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Happy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url1}}/{{api}}/update_project/4",
+					"host": [
+						"{{base_url1}}"
+					],
+					"path": [
+						"{{api}}",
+						"update_project",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Project",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url1}}/index.php?/api/v2/delete_project/25",
+					"host": [
+						"{{base_url1}}"
+					],
+					"path": [
+						"index.php"
+					],
+					"query": [
+						{
+							"key": "/api/v2/delete_project/25",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "kristipulina83@gmail.com",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "FB741Fgqd49w1DmWMkhq",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api",
+			"value": "index.php?/api/v2"
+		},
+		{
+			"key": "base_url1",
+			"value": "https://postmankris2022.testrail.io"
+		}
+	]
+}
